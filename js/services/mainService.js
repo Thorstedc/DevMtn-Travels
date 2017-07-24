@@ -1,4 +1,4 @@
-angular.module('devmtnTravel').service('mainSrv', function(){
+angular.module("devmtnTravel").service('mainSrv', function(){
     this.travelInfo = [{
         country: 'United States',
         image: "../img/US.jpg",
@@ -80,4 +80,13 @@ angular.module('devmtnTravel').service('mainSrv', function(){
 				price: 1722.12
 			},
 		]
+
+this.getlocation = function(id){
+  for (var i = 0; i < this.packageInfo.length; i++) {
+    if (id == this.packageInfo[i].id) {
+      return this.packageInfo[i]
+    }
+  }
+}
+
 })
